@@ -1,0 +1,13 @@
+.item-list-container {
+    padding: 20px;
+    background-color: #6e6e6e;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item-list-container h2 {
+    color: #ffffff;
+    font-size: 24px;
+}
