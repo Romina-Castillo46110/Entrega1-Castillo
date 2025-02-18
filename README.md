@@ -6,10 +6,9 @@ Hola, mi nombre es **Romina Castillo**, y este es mi proyecto para **CoderHouse*
 ## 🚀 Tecnologías Utilizadas
 Este proyecto ha sido desarrollado utilizando:
 - ⚛️ **React.js** - Biblioteca para construir interfaces de usuario interactivas.
-- 🎨 **CSS3** - Para los estilos del sitio.
+- 🎨 **CSS** - Para los estilos del sitio.
 - 📦 **Vite** - Herramienta de desarrollo rápida para proyectos con React.
-- 🛠️ **React Icons** - Para añadir iconos al sitio.
-- 🔗 **React Router** - Para la navegación entre páginas.
+- 🖥️ HTML5 - Estructura de las páginas web.
 
 ## 📥 Instalación y Configuración
 Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
@@ -50,7 +49,7 @@ El proyecto está organizado de la siguiente manera:
 ```
 
 ## 🛠️ Funcionamiento General
-- **Navbar.jsx**: Contiene el menú de navegación con enlaces y un submenú desplegable de "Productos".
+- **Navbar.jsx**: Contiene el menú de navegación con enlaces.
 - **CartWidget.jsx**: Muestra un ícono de carrito con un número de productos fijo.
 - **ItemListContainer.jsx**: Recibe una `prop` llamada `greeting` y la muestra en la pantalla.
 - **App.jsx**: Es el componente principal que organiza la estructura de la aplicación.
