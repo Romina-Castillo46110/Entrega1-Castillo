@@ -1,7 +1,7 @@
 import '../style/Navbar.css'
-import CartWidget from './CartWidget';
+import {CartWidget} from './CartWidget';
 
-function Navbar() {
+export const Navbar = () => {
     return (
         <nav className="navbar">
             <ul className="navbar-list">
@@ -25,7 +25,7 @@ function Navbar() {
     )
 }
 
-export default Navbar;
+
 
 /*
                     <ul className='submenu'>

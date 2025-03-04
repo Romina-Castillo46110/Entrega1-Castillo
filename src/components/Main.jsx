@@ -1,5 +1,10 @@
-function Main() {
-    return 
-}
+import { Button } from "./Button"
 
-export default Main;
+export const Main = () => {
+    return (
+       <main>
+            <h2>Home</h2>
+            <Button/>
+       </main>
+    )
+}

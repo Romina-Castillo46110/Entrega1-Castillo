@@ -1,6 +1,6 @@
 
 
-function CartWidget(){
+export const CartWidget = () => {
     return (
         <div className="cart-widget">
             <img src="public/shopping-cart.svg" alt="icono de carrito" />
@@ -8,4 +8,3 @@ function CartWidget(){
         </div>
     )
 }
-export default CartWidget;
