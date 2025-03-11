@@ -25,4 +25,10 @@ body {
 
 
 
+.dark {
+ background-color: lightblue;
+}
 
+.light {
+  background-color: darkblue;
+}

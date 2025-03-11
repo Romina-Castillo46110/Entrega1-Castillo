@@ -1,39 +1,33 @@
-import '../style/Navbar.css'
-import {CartWidget} from './CartWidget';
+import { Link } from "react-router-dom";
+import "../style/Navbar.css";
+import { CartWidget } from '../components/CartWidget'
+import { useCart } from "../context/CartContext";
 
 export const Navbar = () => {
-    return (
-        <nav className="navbar">
-            <ul className="navbar-list">
-                <li className="navbar-item">
-                    <a href="#home" className="navbar-link">Home</a>
-                </li>
-                <li className="navbar-item">
-                    <a href="#productos" className="navbar-link">Productos</a>
-                </li>
-                <li className="navbar-item">
-                    <a href="#about" className="navbar-link">About</a>
-                </li>
-                <li className="navbar-item">
-                    <a href="#contacto" className="navbar-link">Contacto</a>
-                </li>
-                <li className='navbar-item'>
-                    <CartWidget/>
-                </li>
-            </ul>
-      </nav>
-    )
+  const { cart } = useCart(); // Accede al carrito
+  const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+  return (
+    <nav className="navbar">
+      <ul className="navbar-list">
+        <li className="navbar-item">
+          <Link to="/" className="navbar-link">MendoTecno</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/category/electronics" className="navbar-link">Electrónica</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/category/jewelery" className="navbar-link">Joyería</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/category/men's clothing" className="navbar-link">Ropa Hombre</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/category/women's clothing" className="navbar-link">Ropa Mujer</Link>
+        </li>
+        <li className="navbar-item">
+          <CartWidget />
+        </li>
+      </ul>
+    </nav>
+  )
 }
-
-
-
-/*
-                    <ul className='submenu'>
-                        <li><a href="producto1" className='submenu-link'>Celulares</a></li>
-                        <li><a href="producto2" className='submenu-link'>Tablet</a></li>
-                        <li><a href="producto3" className='submenu-link'>PC</a></li>
-                        <li><a href="producto4" className='submenu-link'>Laptop</a></li>
-                        <li><a href="producto5" className='submenu-link'>Cargadores</a></li>
-                        <li><a href="producto6" className='submenu-link'>Smartwatch</a></li>
-                    </ul>
-*/ 

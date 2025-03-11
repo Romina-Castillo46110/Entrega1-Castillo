@@ -33,31 +33,19 @@
   transform: scale(1.1);  /* Efecto de aumento al pasar el ratón */
 }
 
-/*
-.submenu{
-  display: none;
-  position: absolute;
-  background-color: #333;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.cart-info {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.submenu:hover {
-  display: block;
-}
-
-.submenu li{
-  padding: 10px;
-}
-
-.submenu a {
+.cart-count {
+  background-color: red;
   color: white;
-  text-decoration: none;
-  display: block;
+  padding: 5px 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  font-weight: bold;
 }
-
-.submenu a:hover {
-  background-color: #555;
-}*/
