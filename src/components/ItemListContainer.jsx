@@ -37,7 +37,7 @@ export const ItemListContainer = ({ greeting }) => {
 
   const handleAddToCart = (producto) => {
     addToCart(producto); // Agregar el producto al carrito usando la función del contexto
-    setMessage(`Producto ${producto.title} | Agregado Correctamente |`); // Establecer el mensaje
+    setMessage(`Producto ${producto.title} | Agregado Correctamente |`); 
     setShowNotificacion(true); // Mostrar la notificación
     setTimeout(() => {
       setShowNotificacion(false); // Ocultar la notificación después de 3 segundos

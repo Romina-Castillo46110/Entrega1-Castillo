@@ -9,15 +9,15 @@
 }
   
 .navbar-list {
-  list-style-type: none;  /* Eliminar los puntos */
+  list-style-type: none; 
   margin: 10;
   padding: 0;
   display: flex;
-  justify-content: flex-end;  /* Los items estarán alineados a la derecha */
+  justify-content: flex-end;  
 }
   
 .navbar-item {
-  margin-left: 35px;  /* Espacio entre los items */
+  margin-left: 35px;  
     
 }
   
@@ -29,8 +29,8 @@
 }
   
 .navbar-link:hover {
-  color: #000000;  /* Color amarillo al hacer hover */
-  transform: scale(1.1);  /* Efecto de aumento al pasar el ratón */
+  color: #000000;  
+  transform: scale(1.1); 
 }
 
 .cart-info {

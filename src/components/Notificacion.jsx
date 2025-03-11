@@ -1,6 +1,6 @@
 
 import React from "react";
-import "../style/Notificacion.css"; // Estilos de la notificación
+import "../style/Notificacion.css"; 
 
 export const Notificacion = ({ message, onClose }) => {
   return (

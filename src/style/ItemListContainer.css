@@ -34,20 +34,20 @@
 
   .product-item {
     display: flex;
-    align-items: center; /* Alinea verticalmente */
-    justify-content: space-between; /* Distribuye los elementos uniformemente */
+    align-items: center; 
+    justify-content: space-between; 
     padding: 10px;
     border-bottom: 1px solid #ccc;
-    gap: 20px; /* Espaciado entre elementos */
+    gap: 20px; 
   }
   
   .precio-column {
-    flex: 0.3; /* Ajusta el tamaño del precio */
-    text-align: right; /* Alinea el precio a la derecha */
+    flex: 0.3; 
+    text-align: right;
   }
   
   .add-to-cart-btn {
-    flex: 0.2; /* Ajusta el tamaño del botón */
+    flex: 0.2; 
     padding: 5px 10px;
     background-color: #c9c9c9;
     color: rgb(0, 0, 0);

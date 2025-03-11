@@ -16,7 +16,6 @@ export const CartWidget = () => {
   
   return (
     <div className="cart-widget">
-      {/* Asegúrate de que el evento onClick esté correctamente configurado en el botón */}
       <button onClick={handleCartClick} className="cart-button">
         <img src={cartIcon} alt="Carrito" className="cart-icon" />
         {cartQuantity > 0 && <span className="cart-quantity">{cartQuantity}</span>}

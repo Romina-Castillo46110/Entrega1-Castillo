@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 250px; /* Asegura que todas tengan el mismo ancho */
+    min-width: 250px; 
   }
   
   .notification p {

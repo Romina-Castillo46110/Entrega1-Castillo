@@ -1,6 +1,6 @@
 .header{
     background-color: rgb(136, 128, 128);
-    padding-top: 50px;  /* Añade espacio adicional si tienes un navbar fijo */
+    padding-top: 50px; 
     text-align: center;
     padding: 50px;
     background: linear-gradient(to right, #0a0905, #758aff); 
