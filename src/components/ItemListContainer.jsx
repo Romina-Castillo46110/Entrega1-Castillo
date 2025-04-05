@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useCart } from "../context/CartContext"; // Importa el hook para acceder al contexto
+import { useCart } from "../context/CartContext";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { Notificacion } from "./Notificacion"; // Importa el componente Notificacion
 import { useParams } from "react-router-dom";
+import { Notificacion } from "./Notificacion"; 
+import { ItemList } from "./ItemList";
 import "../style/ItemListContainer.css";
 
 export const ItemListContainer = ({ greeting }) => {
   const { categoryId } = useParams();
   const [productos, setProductos] = useState([]);
-  const { addToCart } = useCart(); // Obtén la función addToCart del contexto
+  const { addToCart } = useCart();
   const [loading, setLoading] = useState(true);
-  const [message, setMessage] = useState(""); // Estado para el mensaje de notificación
-  const [showNotificacion, setShowNotificacion] = useState(false); // Estado para controlar la visibilidad de la notificación
+  const [message, setMessage] = useState(""); 
+  const [showNotificacion, setShowNotificacion] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -36,34 +36,22 @@ export const ItemListContainer = ({ greeting }) => {
   }, [categoryId]);
 
   const handleAddToCart = (producto) => {
-    addToCart(producto); // Agregar el producto al carrito usando la función del contexto
-    setMessage(`Producto ${producto.title} | Agregado Correctamente |`); 
-    setShowNotificacion(true); // Mostrar la notificación
+    addToCart(producto);
+    setMessage(`Producto ${producto.title} | Agregado Correctamente |`);
+    setShowNotificacion(true);
     setTimeout(() => {
-      setShowNotificacion(false); // Ocultar la notificación después de 3 segundos
+      setShowNotificacion(false);
     }, 3000);
   };
 
   return (
     <div className="item-list-container">
-      <h2>{greeting || "Productos"}</h2>
-      {loading ? <p>Cargando productos...</p> : null}
+      <h2>{greeting || (categoryId ? `Categoría: ${categoryId}` : "Todos los productos")}</h2>
+      {loading && <p>Cargando productos...</p>}
       {showNotificacion && (
         <Notificacion message={message} onClose={() => setShowNotificacion(false)} />
       )}
-      <ul>
-        {productos.map((producto) => (
-          <li key={producto.id} className="product-item">
-            <Link to={`/item/${producto.id}`} className="item-link">
-              <h3>{producto.title}</h3>
-            </Link>
-            <p className="precio-column">Precio: ${producto.price}</p>
-            <button onClick={() => handleAddToCart(producto)} className="add-to-cart-btn">
-              Agregar al carrito
-            </button>
-          </li>
-        ))}
-      </ul>
+      <ItemList products={productos} onAddToCart={handleAddToCart} />
     </div>
   );
 };

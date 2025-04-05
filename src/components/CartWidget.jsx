@@ -1,17 +1,17 @@
 import React from "react";
-import { useCart } from "../context/CartContext"; // Importa el hook del carrito
-import cartIcon from "../assets/shopping-cart.svg"; // Importa la imagen del carrito
+import { useCart } from "../context/CartContext"; 
+import cartIcon from "../assets/shopping-cart.svg";
 import "../style/CartWidget.css";
 
 export const CartWidget = () => {
-  const { cart, toggleCart } = useCart(); // Obtén la información del carrito y la función toggleCart
+  const { cart, toggleCart } = useCart(); 
 
-  // Obtener la cantidad total de productos en el carrito
+  
   const cartQuantity = cart.reduce((total, item) => total + item.quantity, 0);
 
   const handleCartClick = () => {
     console.log("Carrito clickeado");
-    toggleCart(); // Llamada a toggleCart
+    toggleCart(); 
   };
   
   return (

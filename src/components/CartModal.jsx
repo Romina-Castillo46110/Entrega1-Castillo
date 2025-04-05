@@ -1,10 +1,10 @@
 import { useCart } from "../context/CartContext";
-import "../style/CartModal.css"
+import { Link } from "react-router-dom"; 
+import "../style/CartModal.css";
 
 export const CartModal = () => {
   const { cart, removeFromCart, isCartOpen, toggleCart } = useCart();
 
-  // Calcular el total de los productos en el carrito
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
   if (!isCartOpen) return null;
@@ -32,10 +32,17 @@ export const CartModal = () => {
                 </li>
               ))}
             </ul>
-            <p className="cart-total">Total: ${totalPrice.toFixed(2)}</p> {/* Muestra el total */}
+            <p className="cart-total">Total: ${totalPrice.toFixed(2)}</p> 
+
+           
+            <Link to="/checkout">
+              <button className="checkout-btn" onClick={toggleCart}>
+                Ir a Checkout 🛒
+              </button>
+            </Link>
           </>
         )}
       </div>
     </div>
-  )
-}
+  );
+};

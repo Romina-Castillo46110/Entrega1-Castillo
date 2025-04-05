@@ -18,15 +18,15 @@ export const CartProvider = ({ children }) => {
     console.log("🛒 Carrito actualizado:", cart);
   }, [cart]); // Se ejecutará cada vez que cart cambie
 
-  const addToCart = (product) => {
+  const addToCart = (product, cantidad = 1) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
       if (existingProduct) {
         return prevCart.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === product.id ? { ...item, quantity: item.quantity + cantidad } : item
         );
       }
-      return [...prevCart, { ...product, quantity: 1 }];
+      return [...prevCart, { ...product, quantity: cantidad }];
     });
   };
 

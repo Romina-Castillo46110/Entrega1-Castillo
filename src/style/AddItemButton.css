@@ -1,0 +1,28 @@
+.add-item-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.9rem 1.6rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .add-item-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .add-item-button:active {
+    transform: scale(0.98);
+  }
+  
+  .add-item-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }

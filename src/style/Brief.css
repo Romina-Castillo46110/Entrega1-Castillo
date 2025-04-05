@@ -1,0 +1,56 @@
+.brief {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.brief h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #222;
+}
+
+.brief ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.brief li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brief h3 {
+  font-size: 1.4rem;
+  text-align: right;
+  margin-top: 1.5rem;
+  color: #007bff;
+}
+
+.brief button {
+  display: block;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 2rem auto 0;
+  transition: background-color 0.3s ease;
+}
+
+.brief button:hover {
+  background-color: #218838;
+}
