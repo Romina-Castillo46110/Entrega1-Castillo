@@ -53,6 +53,9 @@ El proyecto está organizado de la siguiente manera:
 - **CartWidget.jsx**: Muestra un ícono de carrito con un número de productos fijo.
 - **ItemListContainer.jsx**: Recibe una `prop` llamada `greeting` y la muestra en la pantalla.
 - **App.jsx**: Es el componente principal que organiza la estructura de la aplicación.
+- **CartContext.jsx**: Manejo global del carrito con funciones para agregar, eliminar y mostrar productos.
+- **CartModal.jsx**: Ventana modal flotante que muestra el contenido del carrito.
+- **Notificacion.jsx**: Notificaciones emergentes cuando se agrega un producto al carrito.
 
 ## 📌 Contacto
 Si tienes dudas o sugerencias, puedes contactarme en GitHub: [Romina-Castillo46110](https://github.com/Romina-Castillo46110).
