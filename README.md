@@ -106,7 +106,6 @@ El proyecto está organizado de la siguiente manera:
 - **CartContext.jsx**: Manejo global del carrito con funciones para agregar, eliminar y mostrar productos.
 - **CartModal.jsx**: Ventana modal flotante que muestra el contenido del carrito.
 - **Notificacion.jsx**: Notificaciones emergentes cuando se agrega un producto al carrito.
--
 
 ## 📌 Contacto
 
